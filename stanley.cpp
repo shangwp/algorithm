@@ -35,3 +35,20 @@ double delta_find_degree(double x,double y,double heading)//stanley method
 	printf("delta=%lf\n",delta_sum_result);
 	return delta_sum_result;
 }
+int nearest_find(double x,double y)
+{
+	double temp_dis;
+	double min_dis=100000;
+	int    res_num;
+	int    length_point_num=a.size();
+	for(int i=num_curr;i<length_point_num-1;i++)
+	{
+		temp_dis=sqrt((a[i][0]-x)*(a[i][0]-x)+(a[i][1]-y)*(a[i][1]-y));
+		if(temp_dis<=min_dis)
+		{
+			res_num=i;
+			min_dis=temp_dis;
+		}
+	}
+	return res_num;
+}
