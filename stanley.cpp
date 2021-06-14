@@ -1,3 +1,4 @@
+#include <math.h>
 double delta_find_degree(double x,double y,double heading)//stanley method
 {
 	double degree_usv;//无人船->目标点角度
